@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+
+div.c
+{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.c
+{
+    background-color: #fcba03;
+    border-color: black;
+    /* border-radius: 5px; */
+}
+
+.A
+{
+    background-color: #fcba03;
+}
+
+.btn
+{
+    background-color: black;
+    color: #fcba03;
+    padding: 15px 40px;
+    border-radius: 9px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover
+{
+    background-color: green;
+    color: #fcba03;
+}
+
+</style>
+    <title>{{ title }} Sentiment Analysis</title>
+    </head>
+    <body><div class="container c">
+	<div class="container-fluid p-5 bg-success text-white text-center">
+		<h1>Sentiment Analysis</h1>
+		<p>🙂</p> 
+	</div>
+		</br></br><div align="center">
+			<form method="POST">
+				<textarea name="text1" placeholder="Say Something: ...." rows="10" cols="109" class="A"></textarea><br><br>
+
+				<input class="btn btn-success" type="submit" placeholder="GO!">
+			</form>
+		</div>
+        {% if final %}
+		
+		
+      </br></br>  <div align="center">
+           </br>  </br>
+		   <!-- <h2 class="bg-success text-white">The Sentiment of</h2> -->
+		   <h1>{{text1}}</h1>
+           <h2 class="bg-success text-white">is</h2>
+		   <!-- <h2>is {{ final *100}}% positive !</h2> -->
+			<!-- <h2>Score table</h2> -->
+
+
+<div class="container table-responsive-sm">
+    <h1>"{{message}}"</h1>
+</div>
+
+            {% else %}
+            <p></p>
+            {% endif %}
+        </div></br></br>				
+  </div>  </body>
+</html>
+
